@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>GWAS LMMs Methods</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.2px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 14.4px 0.0px; font: 14.4px Times; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.2px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    span.s1 {font-kerning: none; background-color: #b3b3b3}
+    span.s2 {font: 12.0px Times; font-kerning: none; color: #0000e9; background-color: transparent; -webkit-text-stroke: 0px #0000e9}
+    span.s3 {font: 12.0px Times; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {-webkit-text-stroke: 0px #000000}
+    span.s5 {text-decoration: underline ; font-kerning: none}
+    span.s6 {font-kerning: none}
+    span.s7 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s8 {font: 12.0px Times; text-decoration: underline ; font-kerning: none}
+    table.t1 {margin: 20.0px 0.0px 0.0px 0.0px}
+    td.td1 {width: 97.3px; background-color: #2965a8; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 407.6px; background-color: #2965a8; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 265.1px; background-color: #2965a8; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 778.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td5 {width: 97.3px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td6 {width: 407.6px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td7 {width: 265.1px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p3"><span class="s6"><b>Different LMM methods using in GWAS</b></span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><span class="s6"><b>Tool</b></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p4"><span class="s6"><b>Description</b></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s6"><b>Websites</b></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s6"><b>Reference</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" valign="middle" class="td4">
+        <p class="p5"><span class="s6"><b>Single-locus model and their respective software and packages for GWAS using LMM</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GRAMMAR</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GRAMMAR, an alternate method to pedigree-founded QTL association mapping, which is a quick and easy method. It can handle millions of markers and significantly faster than the evaluated genotype approach for association analysis.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href=z"-"</span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Aulchenko et al., 2007a</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>EMMA</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">EMMA is a fixed model edition of LMM using for controlling population structure and genetic relatedness for GWAS.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="http://mouse.cs.ucla.edu/emma/">http://mouse.cs.ucla.edu/emma/ class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Kang et al., 2008</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>CMLM/P3D<span class="Apple-converted-space"> </span></b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">CMLM (compressed MLM) diminished the actual sample size into groups using clustering and used another method, P3D (population parameters previously determined), that removes the re-calculation of variance components. The combined application of these two methods prominently abridged computing time and retained/enhanced statistical power. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-"><span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Zhang et al., 2010</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>EMMAX</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">EMMAX is a variance component approach founded on the LMM method, which decreased the computational time for dissecting big GWAS data sets and used for fixing sample structure in GWASs. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="http://genetics.cs.ucla.edu/emmax/">http://genetics.cs.ucla.edu/emmax/<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Kang et al., 2008</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>FaST-LMM</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">FaST-LMM, an LMM based method, used the subset of markers to manage the polygenic effect resulting in attained accelerate speed and need less memory for GWAS.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="https://github.com/fastlmm/FaST-LMM/">https://github.com/fastlmm/FaST-LMM/<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Lippert et al., 2011</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>FaST-LMM-Select</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">FaST-LMM-Select is a simple method that showed that wisely choosing a reduced number of SNPs consistently enhances power, expands standardization, and decreases computational time.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="http://mscompbio.codeplex.com/">http://mscompbio.codeplex.com/<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Listgarten et al., 2012</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GRAMMAR-Gamma</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GRAMMAR-Gamma is an exceptionally fast variance component-based method that can be used for the massive human cohort in GWAS. It is established based on the analytical approximation within the context of the score test method.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Kang et al., 2008</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>WarpedLMM</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">WarpedLMM is a simplification of the ordinary LMM that estimates an ideal transformation from the monitored data for genetic study. Subsequently, the power and accuracy of this method increased in GWAS.  </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-</a></span><span class="s7">  </span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Fusi et al., 2014</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>ECMLM</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">ECMLM, enriched CMLM, used various algorithms and then select the most effective mixture between relationship algorithm and grouping algorithm resulting power increased and can utilize on very divers of complex traits in GWAS.  </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-</a></span><span class="s7">  </span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Li et al., 2014</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>SUPER</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">SUPER method intensely decreases the number of genetic markers utilized to define individual relationships resulting in computationally fast and outstandingly gains statistical power despite utilizing the whole set of SNPs.<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-</a></span><span class="s7">  </span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Wang et al., 2014</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>RMLM<span class="Apple-converted-space"> </span></b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">RMLM, random-SNP-effect MLM, considers the SNP-effect as random, and it permits to use of Bonferroni correction to estimate the p-value for significance tests.</span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-</a></span><span class="s7"> </span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Wang et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>LMM-Score</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">LMM-Score, a new method proposed to identify the genetic loci of complex traits. The simulation study showed that the power of this method increased and need less computing time in comparison to the traditional LMM method.  </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chang et al., 2019</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td5">
+        <p class="p6"><span class="s6"><b>GMMAT</b></span></p>
+      </td>
+      <td valign="middle" class="td6">
+        <p class="p6"><span class="s6">GMMAT is an R package for carrying out association tests using GLMMs in GWAS and sequencing association studies. </span></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p7"><span class="s5"><a href="-">-<span class="s8"></span></a></span></p>
+      </td>
+     <td valign="middle" calss="td7">
+       <p class="p6"><span class="s6">Chen et al., 2016</span></p>
+     </td>
+    </tr>
+    <tr>
+      <td colspan="3" valign="middle" class="td4">
+        <p class="p5"><span class="s6"><b>Table 2.....</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" valign="middle" class="td4">
+        <p class="p5"><span class="s6"><b>Table 3....</b></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
